@@ -1,0 +1,22 @@
+{
+  "name": "swag-labs-playwright-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test:sanity": "npx playwright test --grep @sanity",
+    "test:regression": "npx playwright test --grep @regression"
+  },
+  "dependencies": {
+    "playwright": "^1.59.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.4.0",
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0",
+    "dotenv": "^17.4.2",
+    "typescript": "^5.5.3"
+  },
+  "private": true
+}
