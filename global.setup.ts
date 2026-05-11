@@ -1,5 +1,5 @@
 import { chromium } from '@playwright/test';
-import { currentEnv } from '../../configs/env.manager';
+import { currentEnv } from './src/configs/env.manager';
 
 async function globalSetup() {
     const authFile = 'playwright/.auth/user.json';
