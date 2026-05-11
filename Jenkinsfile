@@ -20,6 +20,13 @@ pipeline {
             }
         }
 
+        stage('Clean Reports') {
+            steps {
+                bat 'if exist allure-report rmdir /s /q allure-report'
+                bat 'if exist allure-results rmdir /s /q allure-results'
+            }
+        }
+
         stage('Run Sanity Tests') {
             steps {
                 bat 'npm run test:sanity'
@@ -39,7 +46,6 @@ pipeline {
             ])
             allure([
                 includeProperties: false,
-                jdk: '',
                 results: [[path: 'allure-results']]
             ])
         }
