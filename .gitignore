@@ -13,6 +13,7 @@ yarn-error.log*
 # Playwright
 node_modules/
 /playwright/
+/allure-results/
 /test-results/
 /playwright-report/
 /blob-report/
